@@ -29,6 +29,6 @@ exports.postLogin = async (req, res) => {
         );
         res.status(200).send({ message: "Login successful", token });
     } catch (err) {
-        res.status(500).json({ error: err.message });
+        res.status(500).send({ error: err.message });
     }
 };

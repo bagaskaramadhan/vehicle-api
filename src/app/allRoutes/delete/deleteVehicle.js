@@ -8,9 +8,9 @@ exports.deleteVehicle = async (req, res) => {
             await vehicle.destroy();
             res.status(200).send("OK");
         } else {
-            res.status(404).json({ message: "Vehicle not found" });
+            res.status(404).send({ message: "Vehicle not found" });
         }
     } catch (err) {
-        res.status(500).json({ error: err.message });
+        res.status(500).send({ error: err.message });
     }
 };

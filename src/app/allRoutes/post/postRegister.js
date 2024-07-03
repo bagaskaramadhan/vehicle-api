@@ -23,6 +23,6 @@ exports.postRegister = async (req, res) => {
         await Users.create({ name: nameCase, password: hashedPassword, is_admin: isAdmin });
         res.status(200).send({ message: "OK" });
     } catch (err) {
-        res.status(500).json({ error: err.message });
+        res.status(500).send({ error: err.message });
     }
 };

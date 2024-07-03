@@ -1,16 +1,15 @@
 const { Op } = require("sequelize");
-const VehicleModel = require("../../../model/modelVehicleModel");
+const VehicleType = require("../../../model/modelVehicleType");
 
-exports.getAllVehicles = async (req, res) => {
+exports.getAllVehicleType = async (req, res) => {
     try {
-        let { page, limit, name, type_id } = req.query;
-        const params = ["page", "limit", "name", "type_id"];
+        let { page, limit, name, brand_id } = req.query;
+        const params = ["page", "limit", "name", "brand_id"];
         for (let param in req.query) {
             if (!params.includes(param)) {
                 return res.status(400).send({ error: `Parameter "${param}" is not allowed` });
             }
         }
-
         page = parseInt(page) || 1;
         limit = parseInt(limit) || 10;
         const where = {};
@@ -19,8 +18,8 @@ exports.getAllVehicles = async (req, res) => {
             where.name = { [Op.like]: `%${name}%` };
         }
 
-        if (type_id) {
-            where.type_id = type_id;
+        if (brand_id) {
+            where.brand_id = brand_id;
         }
 
         const queryOptions = {
@@ -29,12 +28,12 @@ exports.getAllVehicles = async (req, res) => {
             limit: limit
         };
 
-        const vehicles = await VehicleModel.findAll(queryOptions);
-        const totalCount = await VehicleModel.count(queryOptions);
+        const vehicleType = await VehicleType.findAll(queryOptions);
+        const totalCount = await VehicleType.count(queryOptions);
         const totalPages = Math.ceil(totalCount / limit);
 
         res.status(200).send({
-            data: vehicles,
+            data: vehicleType,
             metadata: {
                 totalItems: totalCount,
                 totalPages: totalPages,

@@ -38,9 +38,9 @@ route
     .post(`${path}/login`, postLogin)
     // PUT
     .put(`${path}/vehicle/:id`, verifyToken, verifyAdmin, putUpdateVehicle)
-    .put(`${path}/pricelist/:id`, putUpdatePricelist)
+    .put(`${path}/pricelist/:id`, verifyToken, verifyAdmin, putUpdatePricelist)
     // DELETE
     .delete(`${path}/vehicle/:id`, verifyToken, verifyAdmin, deleteVehicle)
-    .delete(`${path}/pricelist/:id`,verifyToken, verifyAdmin, deletePricelist);
+    .delete(`${path}/pricelist/:id`, verifyToken, verifyAdmin, deletePricelist);
 
 module.exports = route;

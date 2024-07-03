@@ -10,7 +10,14 @@ exports.getVehicleById = async (req, res) => {
             include: [{ model: VehicleType, include: [VehicleBrand] }]
         });
         if (vehicle) {
-            res.status(200).json(vehicle);
+            const result = {
+                id: vehicle.id,
+                name:vehicle.name,
+                type_id: vehicle.type_id,
+                created_at: vehicle.created_at,
+                updated_at: vehicle.updated_at
+            };
+            res.status(200).json(result);
         } else {
             res.status(404).json({ message: "Vehicle not found" });
         }

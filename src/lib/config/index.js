@@ -14,5 +14,6 @@ module.exports = Config = {
     vcYear: process.env.YEAR || "",
     vcModel: process.env.MODEL || "",
     vcPrice: process.env.PRICE || "",
-    tokenKey: process.env.TOKENKEY || ""
+    tokenKey: process.env.TOKENKEY || "",
+    tokenExp: process.env.TOKENEXP || ""
 };

@@ -1,0 +1,1085 @@
+{
+	"info": {
+		"_postman_id": "53d2985f-9365-4129-ba39-058a906a2355",
+		"name": "Vehicle-API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "10601164"
+	},
+	"item": [
+		{
+			"name": "Vehicle",
+			"item": [
+				{
+					"name": "GET",
+					"item": [
+						{
+							"name": "Get All Vehicle",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/api/vehicle",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"vehicle"
+									],
+									"query": [
+										{
+											"key": "type_id",
+											"value": "11",
+											"disabled": true
+										},
+										{
+											"key": "name",
+											"value": "r-v",
+											"disabled": true
+										},
+										{
+											"key": "page",
+											"value": "2",
+											"disabled": true
+										},
+										{
+											"key": "ss",
+											"value": "ss",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Get All Vehicle",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:3000/api/vehicle",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "3000",
+											"path": [
+												"api",
+												"vehicle"
+											],
+											"query": [
+												{
+													"key": "type_id",
+													"value": "11",
+													"disabled": true
+												},
+												{
+													"key": "name",
+													"value": "r-v",
+													"disabled": true
+												},
+												{
+													"key": "page",
+													"value": "2",
+													"disabled": true
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "321"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"141-cIhvvHdrnHcOvXiDdwsn+rxM5qA\""
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 03 Jul 2024 12:06:47 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"data\": [\n        {\n            \"id\": 13,\n            \"name\": \"CR-V\",\n            \"type_id\": 21,\n            \"created_at\": \"2024-07-02T09:05:39.000Z\",\n            \"updated_at\": \"2024-07-02T09:05:39.000Z\"\n        },\n        {\n            \"id\": 14,\n            \"name\": \"HR-V\",\n            \"type_id\": 21,\n            \"created_at\": \"2024-07-02T09:05:42.000Z\",\n            \"updated_at\": \"2024-07-02T09:05:42.000Z\"\n        }\n    ],\n    \"metadata\": {\n        \"totalItems\": 2,\n        \"totalPages\": 1,\n        \"currentPage\": 1,\n        \"itemsPerPage\": 10\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "Get Vehicle By Id",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/api/vehicle/15",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"vehicle",
+										"15"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Get Vehicle By Id",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:3000/api/vehicle/15",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "3000",
+											"path": [
+												"api",
+												"vehicle",
+												"15"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "120"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"78-eEhqKoho58Uw3ZN14FyJYnAJsag\""
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 03 Jul 2024 12:11:17 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"id\": 15,\n    \"name\": \"Explorer\",\n    \"type_id\": 31,\n    \"created_at\": \"2024-07-02T09:06:46.000Z\",\n    \"updated_at\": \"2024-07-02T09:06:46.000Z\"\n}"
+								}
+							]
+						},
+						{
+							"name": "Get All Vehicle Brand",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/api/vehicle-brand?name=m",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"vehicle-brand"
+									],
+									"query": [
+										{
+											"key": "name",
+											"value": "m"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Get All Vehicle Brand",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:3000/api/vehicle-brand?name=m",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "3000",
+											"path": [
+												"api",
+												"vehicle-brand"
+											],
+											"query": [
+												{
+													"key": "name",
+													"value": "m"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "298"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"12a-jKqO31d6DfDIKqLED7kuC1b+OsQ\""
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 03 Jul 2024 16:02:09 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"data\": [\n        {\n            \"id\": 16,\n            \"name\": \"BMW\",\n            \"created_at\": \"2024-07-03T13:29:26.000Z\",\n            \"updated_at\": \"2024-07-03T13:29:26.000Z\"\n        },\n        {\n            \"id\": 17,\n            \"name\": \"Mercedes\",\n            \"created_at\": \"2024-07-03T13:29:33.000Z\",\n            \"updated_at\": \"2024-07-03T13:29:33.000Z\"\n        }\n    ],\n    \"metadata\": {\n        \"totalItems\": 2,\n        \"totalPages\": 1,\n        \"currentPage\": 1,\n        \"itemsPerPage\": 10\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "Get All Vehicle Type",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/api/vehicle-type?brand_id=2&name=uv",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"vehicle-type"
+									],
+									"query": [
+										{
+											"key": "brand_id",
+											"value": "2"
+										},
+										{
+											"key": "name",
+											"value": "uv"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Get All Vehicle Type",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:3000/api/vehicle-type?brand_id=2&name=uv",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "3000",
+											"path": [
+												"api",
+												"vehicle-type"
+											],
+											"query": [
+												{
+													"key": "brand_id",
+													"value": "2"
+												},
+												{
+													"key": "name",
+													"value": "uv"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "203"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"cb-zmgpiLz1IouCKK7aiTb3KVy0c5w\""
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 03 Jul 2024 16:07:00 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"data\": [\n        {\n            \"id\": 21,\n            \"name\": \"SUV\",\n            \"brand_id\": 2,\n            \"created_at\": \"2024-07-02T08:01:32.000Z\",\n            \"updated_at\": \"2024-07-02T08:01:32.000Z\"\n        }\n    ],\n    \"metadata\": {\n        \"totalItems\": 1,\n        \"totalPages\": 1,\n        \"currentPage\": 1,\n        \"itemsPerPage\": 10\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "Get All Pricelist",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/api/pricelist",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"pricelist"
+									],
+									"query": [
+										{
+											"key": "code",
+											"value": "au",
+											"disabled": true
+										},
+										{
+											"key": "price",
+											"value": "100000",
+											"disabled": true
+										},
+										{
+											"key": "year_id",
+											"value": "3",
+											"disabled": true
+										},
+										{
+											"key": "model_id",
+											"value": "13",
+											"disabled": true
+										},
+										{
+											"key": "ss",
+											"value": "ss",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Get All Pricelist",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:3000/api/pricelist",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "3000",
+											"path": [
+												"api",
+												"pricelist"
+											],
+											"query": [
+												{
+													"key": "code",
+													"value": "au",
+													"disabled": true
+												},
+												{
+													"key": "price",
+													"value": "100000",
+													"disabled": true
+												},
+												{
+													"key": "year_id",
+													"value": "3",
+													"disabled": true
+												},
+												{
+													"key": "model_id",
+													"value": "13",
+													"disabled": true
+												},
+												{
+													"key": "ss",
+													"value": "ss",
+													"disabled": true
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "1591"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"637-Ehw4x4xI0f/l7cNOdrRdJN2YZr0\""
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 03 Jul 2024 16:34:40 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"data\": [\n        {\n            \"id\": 1,\n            \"code\": \"RAV4-2011\",\n            \"price\": 100000,\n            \"year_id\": 1,\n            \"model_id\": 10,\n            \"created_at\": \"2024-07-02T09:29:53.000Z\",\n            \"updated_at\": \"2024-07-02T09:29:53.000Z\"\n        },\n        {\n            \"id\": 2,\n            \"code\": \"Camry-2011\",\n            \"price\": 150000,\n            \"year_id\": 2,\n            \"model_id\": 11,\n            \"created_at\": \"2024-07-02T09:29:53.000Z\",\n            \"updated_at\": \"2024-07-02T09:29:53.000Z\"\n        },\n        {\n            \"id\": 3,\n            \"code\": \"CR-V-2012\",\n            \"price\": 200000,\n            \"year_id\": 5,\n            \"model_id\": 13,\n            \"created_at\": \"2024-07-02T09:29:53.000Z\",\n            \"updated_at\": \"2024-07-02T09:29:53.000Z\"\n        },\n        {\n            \"id\": 4,\n            \"code\": \"HR-V-2015\",\n            \"price\": 100000,\n            \"year_id\": 3,\n            \"model_id\": 13,\n            \"created_at\": \"2024-07-02T09:29:53.000Z\",\n            \"updated_at\": \"2024-07-02T09:29:53.000Z\"\n        },\n        {\n            \"id\": 5,\n            \"code\": \"Explorer-2012\",\n            \"price\": 100000,\n            \"year_id\": 3,\n            \"model_id\": 14,\n            \"created_at\": \"2024-07-02T09:29:53.000Z\",\n            \"updated_at\": \"2024-07-02T09:29:53.000Z\"\n        },\n        {\n            \"id\": 6,\n            \"code\": \"Escape-2014\",\n            \"price\": 5500000,\n            \"year_id\": 2,\n            \"model_id\": 15,\n            \"created_at\": \"2024-07-02T09:29:53.000Z\",\n            \"updated_at\": \"2024-07-02T09:29:53.000Z\"\n        },\n        {\n            \"id\": 7,\n            \"code\": \"Accord-2013\",\n            \"price\": 100000,\n            \"year_id\": 1,\n            \"model_id\": 16,\n            \"created_at\": \"2024-07-02T09:29:53.000Z\",\n            \"updated_at\": \"2024-07-02T09:29:53.000Z\"\n        },\n        {\n            \"id\": 8,\n            \"code\": \"X5-2020\",\n            \"price\": 6000000,\n            \"year_id\": 2,\n            \"model_id\": 17,\n            \"created_at\": \"2024-07-02T09:29:53.000Z\",\n            \"updated_at\": \"2024-07-02T09:29:53.000Z\"\n        },\n        {\n            \"id\": 9,\n            \"code\": \"Civic-2009\",\n            \"price\": 300000,\n            \"year_id\": 2,\n            \"model_id\": 18,\n            \"created_at\": \"2024-07-02T09:29:53.000Z\",\n            \"updated_at\": \"2024-07-02T09:29:53.000Z\"\n        },\n        {\n            \"id\": 10,\n            \"code\": \"Fusion-2024\",\n            \"price\": 100000,\n            \"year_id\": 1,\n            \"model_id\": 19,\n            \"created_at\": \"2024-07-02T09:29:53.000Z\",\n            \"updated_at\": \"2024-07-02T09:29:53.000Z\"\n        }\n    ],\n    \"metadata\": {\n        \"totalItems\": 11,\n        \"totalPages\": 2,\n        \"currentPage\": 1,\n        \"itemsPerPage\": 10\n    }\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "POST",
+					"item": [
+						{
+							"name": "Create Vehicle Model",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"Capricorn\",\n    \"type_id\": \"32\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/vehicle",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"vehicle"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create Vehicle Price",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"code\": \"RAV4-2011\",\n    \"price\": 100000,\n    \"year_id\": 1,\n    \"model_id\": 10\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/pricelist",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"pricelist"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create Vehicle Brand",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"Audi\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/vehicle-brand",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"vehicle-brand"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Create Vehicle Brand",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"name\": \"Audi\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:3000/api/vehicle-brand",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "3000",
+											"path": [
+												"api",
+												"vehicle-brand"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "103"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"67-jbwrLmp+jKNUiP9tBfvvgKIDxBo\""
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 03 Jul 2024 13:29:40 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"created_at\": \"2024-07-03T13:29:40.917Z\",\n    \"updated_at\": \"2024-07-03T13:29:40.917Z\",\n    \"id\": 18,\n    \"name\": \"Audi\"\n}"
+								}
+							]
+						},
+						{
+							"name": "Create Vehicle Type",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\":\"SUV\",\n    \"brand_id\":\"18\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/vehicle-type",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"vehicle-type"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Create Vehicle Type",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"name\":\"SUV\",\n    \"brand_id\":\"18\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:3000/api/vehicle-type",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "3000",
+											"path": [
+												"api",
+												"vehicle-type"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "118"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"76-v9E36QQjQjQjZ9RV7YOmP9p1gOg\""
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 03 Jul 2024 13:40:38 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"created_at\": \"2024-07-03T13:40:38.430Z\",\n    \"updated_at\": \"2024-07-03T13:40:38.430Z\",\n    \"id\": 34,\n    \"name\": \"SUV\",\n    \"brand_id\": \"18\"\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "PUT",
+					"item": [
+						{
+							"name": "Update vehicle by id",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"Juke\",\n    \"type_id\":\"11\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/vehicle/12",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"vehicle",
+										"12"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update Pricelist By Id",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiYmFnYXNrYXJhbWFkaGFuIiwiaXNfYWRtaW4iOnRydWUsImlhdCI6MTcyMDAyNjExNiwiZXhwIjoxNzIwMDI2MjM2fQ.u924R8DnMerbkUZJSJ7NnnPgtBmRxxtNJTiX3V5Ci4A",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"code\": \"Taurus-2000\",\n    \"price\": 7000000\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/pricelist/11",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"pricelist",
+										"11"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Update Pricelist By Id",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"code\": \"Taurus-2000\",\n    \"price\": 7000000\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:3000/api/pricelist/11",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "3000",
+											"path": [
+												"api",
+												"pricelist",
+												"11"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "152"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"98-NeR7ZUqaE55ZIl4s6ds/EQUkbIU\""
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 03 Jul 2024 17:02:11 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"id\": 11,\n    \"code\": \"Taurus-2000\",\n    \"price\": 7000000,\n    \"year_id\": 6,\n    \"model_id\": 20,\n    \"created_at\": \"2024-07-02T09:29:53.000Z\",\n    \"updated_at\": \"2024-07-03T16:55:27.000Z\"\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "DELETE",
+					"item": [
+						{
+							"name": "Delete vehicle by id",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/api/vehicle/12",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"vehicle",
+										"12"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Pricelist By Id",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/api/pricelist/12",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"pricelist",
+										"12"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"bagaskaramadhan\",\n    \"password\": \"madame\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"login"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Login",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"bimasani\",\n    \"password\": \"madame\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/login",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "216"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"d8-Yc1NIoKbEMJyzU9ZEysnQXPDpsM\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 03 Jul 2024 13:18:42 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Login successful\",\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiYmltYXNhbmkiLCJpc19hZG1pbiI6ZmFsc2UsImlhdCI6MTcyMDAxMjcyMiwiZXhwIjoxNzIwMDEyNzgyfQ.4ACGW_tLVeSLNAavEcOalR2EPJVsUMbM0uqlTusNuZU\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"BIMASANI\",\n    \"password\": \"madame\",\n    \"is_admin\": \"\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"register"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
